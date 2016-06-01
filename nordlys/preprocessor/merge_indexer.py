@@ -1,3 +1,9 @@
+"""
+Merges several Lucene indexes into one Lucene index.
+
+@author: Tino Hakim Lazreg
+"""
+
 import argparse
 from nordlys.retrieval.lucene_tools import Lucene
 
