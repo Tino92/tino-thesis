@@ -1,3 +1,18 @@
+"""
+Creates a Lucene index with ClueWeb entity mentions replaced with FACC annotations.
+
+Input:
+    -ann_dir Annotation directory
+    -cluweb_dir ClueWeb directory
+    -output_dir Output directory
+    -num_processes Number of processes to run
+
+Output:
+    Lucene index
+
+@author: Tino Hakim Lazreg
+"""
+
 import argparse
 import fileinput
 import os

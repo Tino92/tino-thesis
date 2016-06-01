@@ -1,7 +1,17 @@
+"""
+Implements Model 2.
+
+Scores a set of queries using a provided Lucene index.
+
+Output:
+    Run file with scores for the provided queries
+
+@author: Tino Hakim Lazreg
+"""
+
 from __future__ import division
 
 import math
-from collections import defaultdict
 
 from nordlys.retrieval.index_cache import IndexCache
 from nordlys.retrieval.lucene_tools import Lucene
@@ -156,6 +166,10 @@ class Model2(object):
 
     def get_p_q_d(self, query):
         # Preprocess query
+        """
+        Returns the p(q|d) probabilities for the query
+
+        """
         query = Lucene.preprocess(query)
         # score collection, to determine a set of relevant documents.
         res_first_pass = self._first_pass_scoring(self.lucene, query)

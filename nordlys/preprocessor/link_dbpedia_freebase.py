@@ -1,3 +1,16 @@
+"""
+Replaces a qrels.txt file with dbpedia entities, with the corresponding freebase entities.
+
+Input:
+    -qrels Qrels.txt
+    -freebase_links Freebase links
+    -output_dir Output directory
+
+Output:
+    Qrels file with DBpedia entities replaced with freebase links
+@author: Tino Hakim Lazreg
+"""
+
 import argparse
 
 
